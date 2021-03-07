@@ -6,6 +6,8 @@ import (
 )
 
 // Down rolls back a single migration from the current version.
+//
+// uptime
 func Down(db *sql.DB, dir string) error {
 	currentVersion, err := GetDBVersion(db)
 	if err != nil {
